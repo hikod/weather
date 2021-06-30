@@ -2,7 +2,6 @@ var url = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var apiKey = '&appid=6381ffc04045f8a634c40c9d3d759174';
 var searchTxtBox = document.getElementById('search-input').value;
 var searchBtn = document.getElementById("search-button");
-var form = document.getElementById("getWeather");
 
 
 function getCityWeatherData() {
