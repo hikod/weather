@@ -24,7 +24,7 @@
                 <div>
                     <h2>Search for a City:</h2>
                     <div>
-                        <input type="text" class="form-control m-2" id="search-input" placeholder="San Diego" name="city">
+                        <input type="text" class="form-control m-2" id="search-input" placeholder="San Diego" name="city" value="Atlanta">
                         
                         <button type="button" onclick="getCityWeatherData()" class="btn btn-primary btn-block" id="search-button">Search</button> 
                     </div>
@@ -32,14 +32,14 @@
                 <hr>
                 <div>
                     <!-- <div class="btn-group btn-group-vertical" role="group" aria-label="Basic example"> -->
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Austin</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Chicago</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">New York</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Orlando</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">San Francisco</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Seattle</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Denver</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block">Atlanta</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Austin">Austin</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Chicago">Chicago</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="New York">New York</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Orlando">Orlando</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="San Francisco">San Francisco</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Seattle">Seattle</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Denver">Denver</button>
+                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Atlanta">Atlanta</button>
                 </div>
             </div>
             <div class="col m-2">
@@ -48,11 +48,11 @@
                         <div class="col">
                             <div class="card w-100 h-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">Atlanta 6/28</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
-                                    <p class="card-text">UV Index: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
+                                    <p class="card-text">UV Index: <span id="UV"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -62,50 +62,50 @@
                         <div class="col">
                             <div class="card w-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">6/29/2021</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card w-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">6/30/2021</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card w-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">6/31/2021</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card w-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">6/32/2021</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card w-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">6/33/2021</h5>
-                                    <p class="card-text">Temp: </p>
-                                    <p class="card-text">Wind: </p>
-                                    <p class="card-text">Humidity: </p>
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">Temp: <span class="temp"></span></p>
+                                    <p class="card-text">Wind: <span class="wind"></span></p>
+                                    <p class="card-text">Humidity: <span class="humidity"></span></p>
                                 </div>
                             </div>
                         </div>
