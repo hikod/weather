@@ -24,22 +24,20 @@
                 <div>
                     <h2>Search for a City:</h2>
                     <div>
-                        <input type="text" class="form-control m-2" id="search-input" placeholder="San Diego" name="city" value="Atlanta">
-                        
-                        <button type="button" onclick="getCityWeatherData()" class="btn btn-primary btn-block" id="search-button">Search</button> 
+                        <input type="text" class="form-control m-2" id="search-input" placeholder="San Diego" name="city">
+                        <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-primary btn-block" id="search-button" value="Search">Search</button> 
                     </div>
                 </div>
                 <hr>
                 <div>
-                    <!-- <div class="btn-group btn-group-vertical" role="group" aria-label="Basic example"> -->
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Austin">Austin</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Chicago">Chicago</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="New York">New York</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Orlando">Orlando</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="San Francisco">San Francisco</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Seattle">Seattle</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Denver">Denver</button>
-                    <button type="button" onclick="getCityWeatherData()" class="btn btn-secondary btn-block" value="Atlanta">Atlanta</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Austin">Austin</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Chicago">Chicago</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="New York">New York</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Orlando">Orlando</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="San Francisco">San Francisco</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Seattle">Seattle</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Denver">Denver</button>
+                    <button type="button" onclick="getCityWeatherData(this.value)" class="btn btn-secondary btn-block" value="Atlanta">Atlanta</button>
                 </div>
             </div>
             <div class="col m-2">
@@ -48,7 +46,7 @@
                         <div class="col">
                             <div class="card w-100 h-100">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
+                                    <h5 class="card-title"><img class ="image"></h5>
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>
@@ -63,6 +61,7 @@
                             <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
+                                    <img class ="image">
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>
@@ -73,6 +72,7 @@
                             <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
+                                    <img class ="image">
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>
@@ -83,6 +83,7 @@
                             <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
+                                    <img class ="image">
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>
@@ -93,6 +94,7 @@
                             <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
+                                    <img class ="image">
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>
@@ -103,6 +105,7 @@
                             <div class="card w-100">
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
+                                    <img class ="image">
                                     <p class="card-text">Temp: <span class="temp"></span></p>
                                     <p class="card-text">Wind: <span class="wind"></span></p>
                                     <p class="card-text">Humidity: <span class="humidity"></span></p>

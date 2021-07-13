@@ -5,3 +5,7 @@ header{
 h1{
     color: white;
 }
+.card-body{
+    background-color: rgba(14, 17, 22, 0.604);
+    color: white;
+}
