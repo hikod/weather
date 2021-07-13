@@ -19,7 +19,6 @@ var lon;
 
 
 async function getCityWeatherData(value) {
-    console.log(value)
     if (value === "Search") {
         searchTxtBox = document.getElementById('search-input').value;
     } else {
@@ -73,9 +72,10 @@ function setTheDatesForTheNext5Days() {
     for (let index = 0; index < datesArray.length; index++) {
         var text = weatherData.daily[index].dt;
         if (index === 0) {
-            datesArray[index].innerText = searchTxtBox + " (" + toDateTime(text) + ")";
+            datesArray[index].innerText = searchTxtBox + " (" + toDateTime(text) + ") ";
+            var img = document.createElement("img"); img.className="image";
+            datesArray[index].appendChild(img);
             var uvi = document.getElementById("UV");
-            console.log(weatherData.daily[0]);
             if (weatherData.daily[index].uvi > 3) {
                 uvi.style.background = "red";
                 uvi.innerText = weatherData.daily[index].uvi;
@@ -114,7 +114,6 @@ function setHumidity() {
 function setTemperatureImage() {
     var counter = 0;
     for (let index = 0; index < detailsTempImgArray.length; index++) {
-        console.log(weatherData.daily[index].weather[0].description);
         switch (weatherData.daily[index].weather[0].description) {
             case "moderate rain":
                 detailsTempImgArray[index].src = "./Assets/img/rain_light.png";
