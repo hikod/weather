@@ -117,26 +117,61 @@ function setTemperatureImage() {
         console.log(weatherData.daily[index].weather[0].description);
         switch (weatherData.daily[index].weather[0].description) {
             case "moderate rain":
-                detailsTempImgArray[index].src = ".././img/rain_light.png";
+                detailsTempImgArray[index].src = "./Assets/img/rain_light.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
                 break;
-            case "cloudy":
-                detailsTempImgArray[index].src = ".././img/cloudy.png";
-                break;
-            case "moderate rai":
-                detailsTempImgArray[index].src = ".././img/partly_cloudy.png";
-                break;
-            case "sunny":
-                detailsTempImgArray[index].src = ".././img/sunny.png";
-                break;
-            case "moderate ra":
-                detailsTempImgArray[index].src = ".././img/sunny_s_cloudy.png";
+            case "heavy intensity rain":
+                detailsTempImgArray[index].src = "./Assets/img/rain.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
                 break;
             case "rain":
-                detailsTempImgArray[index].src = ".././img/rain.png";
+                detailsTempImgArray[index].src = "./Assets/img/rain.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
                 break;
-            case "moderate":
-                detailsTempImgArray[index].src = ".././img/rain_s_cloudy.png";
+            case "light rain":
+                detailsTempImgArray[index].src = "./Assets/img/rain_light.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;      
+            case "cloudy":
+                detailsTempImgArray[index].src = "./Assets/img/cloudy.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
                 break;
+            case "scattered clouds":
+                detailsTempImgArray[index].src = "./Assets/img/partly_cloudy.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;
+            case "broken clouds":
+                detailsTempImgArray[index].src = "./Assets/img/sunny_s_cloudy.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;
+            case "overcast clouds":
+                detailsTempImgArray[index].src = "./Assets/img/sunny_s_cloudy.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;
+            case "few clouds":
+                detailsTempImgArray[index].src = "./Assets/img/sunny_s_cloudy.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;    
+            case "sunny":
+                detailsTempImgArray[index].src = "./Assets/img/sunny.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;
+            case "clear sky":
+                detailsTempImgArray[index].src = "./Assets/img/sunny.png";
+                detailsTempImgArray[index].width="32"; 
+                detailsTempImgArray[index].height="32"
+                break;
+                    
         }
     }
 }
