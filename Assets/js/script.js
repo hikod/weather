@@ -73,7 +73,9 @@ function setTheDatesForTheNext5Days() {
     for (let index = 0; index < datesArray.length; index++) {
         var text = weatherData.daily[index].dt;
         if (index === 0) {
-            datesArray[index].innerText = searchTxtBox + " (" + toDateTime(text) + ")";
+            datesArray[index].innerText = searchTxtBox + " (" + toDateTime(text) + ") ";
+            var img = document.createElement("img"); img.className="image";
+            datesArray[index].appendChild(img);
             var uvi = document.getElementById("UV");
             console.log(weatherData.daily[0]);
             if (weatherData.daily[index].uvi > 3) {
