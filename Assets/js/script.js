@@ -12,14 +12,19 @@ var datesArray = document.getElementsByClassName("card-title");
 var detailsTempArray = document.getElementsByClassName("temp");
 var detailsWindArray = document.getElementsByClassName("wind");
 var detailsHumidityArray = document.getElementsByClassName("humidity");
+var detailsTempImgArray = document.getElementsByClassName("image");
 var lat;
 var lon;
 
 
 
-
-async function getCityWeatherData() {
+async function getCityWeatherData(value) {
+    console.log(value)
+    if (value === "Search") {
         searchTxtBox = document.getElementById('search-input').value;
+    } else {
+        searchTxtBox = value;
+    }
 
     await fetch(
         'https://api.openweathermap.org/geo/1.0/direct?q=' + searchTxtBox + apiKey
@@ -49,6 +54,7 @@ async function getCityWeatherData() {
         .then((data) => {
             weatherData = data;
             setTheDatesForTheNext5Days();
+            setTemperatureImage();
             setTemperatures();
             setWinds();
             setHumidity();
@@ -70,12 +76,12 @@ function setTheDatesForTheNext5Days() {
             datesArray[index].innerText = searchTxtBox + " (" + toDateTime(text) + ")";
             var uvi = document.getElementById("UV");
             console.log(weatherData.daily[0]);
-            if (weatherData.daily[index].uvi > 3){
+            if (weatherData.daily[index].uvi > 3) {
                 uvi.style.background = "red";
                 uvi.innerText = weatherData.daily[index].uvi;
-            } else{
+            } else {
                 uvi.style.background = "green";
-                uv.innerText = weatherData.daily[index].uvi;
+                uvi.innerText = weatherData.daily[index].uvi;
             }
         } else
             datesArray[index].innerText = toDateTime(text);
@@ -91,7 +97,7 @@ function setTemperatures() {
 }
 function setWinds() {
     var counter = 0;
-    for (let index = 0; index < detailsTempArray.length; index++) {
+    for (let index = 0; index < detailsWindArray.length; index++) {
         var text = weatherData.daily[index].wind_speed + " MPH";
         detailsWindArray[index].textContent = text;
 
@@ -99,9 +105,38 @@ function setWinds() {
 }
 function setHumidity() {
     var counter = 0;
-    for (let index = 0; index < detailsTempArray.length; index++) {
+    for (let index = 0; index < detailsHumidityArray.length; index++) {
         var text = weatherData.daily[index].humidity + " %";
         detailsHumidityArray[index].textContent = text;
 
+    }
+}
+function setTemperatureImage() {
+    var counter = 0;
+    for (let index = 0; index < detailsTempImgArray.length; index++) {
+        console.log(weatherData.daily[index].weather[0].description);
+        switch (weatherData.daily[index].weather[0].description) {
+            case "moderate rain":
+                detailsTempImgArray[index].src = ".././img/rain_light.png";
+                break;
+            case "cloudy":
+                detailsTempImgArray[index].src = ".././img/cloudy.png";
+                break;
+            case "moderate rai":
+                detailsTempImgArray[index].src = ".././img/partly_cloudy.png";
+                break;
+            case "sunny":
+                detailsTempImgArray[index].src = ".././img/sunny.png";
+                break;
+            case "moderate ra":
+                detailsTempImgArray[index].src = ".././img/sunny_s_cloudy.png";
+                break;
+            case "rain":
+                detailsTempImgArray[index].src = ".././img/rain.png";
+                break;
+            case "moderate":
+                detailsTempImgArray[index].src = ".././img/rain_s_cloudy.png";
+                break;
+        }
     }
 }
