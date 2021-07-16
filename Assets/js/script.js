@@ -17,14 +17,24 @@ var lat;
 var lon;
 
 
-
 async function getCityWeatherData(value) {
     if (value === "Search") {
-        window.localStorage.setItem('city',document.getElementById('search-input').value);
-        searchTxtBox = window.localStorage.getItem('city');
-    } else {
-        window.localStorage.setItem('city',value);
-        searchTxtBox = window.localStorage.getItem('city');
+        var button = document.createElement("button");
+        window.localStorage.setItem(document.getElementById('search-input').value,document.getElementById('search-input').value);
+        searchTxtBox = window.localStorage.getItem(document.getElementById('search-input').value);
+        button.type = "button";
+        button.className = "btn btn-secondary btn-block"
+        button.value = searchTxtBox;
+        button.id = searchTxtBox;
+        button.innerHTML =searchTxtBox;
+        button.setAttribute("onclick","getCityWeatherData(this.value)");
+        var searchHistory = document.getElementById("searchHistory");
+        searchHistory.appendChild(button);
+      
+    }
+    else {
+        console.log( window.localStorage.getItem(value));
+        searchTxtBox = window.localStorage.getItem(value);
     }
 
     await fetch(
