@@ -20,9 +20,11 @@ var lon;
 
 async function getCityWeatherData(value) {
     if (value === "Search") {
-        searchTxtBox = document.getElementById('search-input').value;
+        window.localStorage.setItem('city',document.getElementById('search-input').value);
+        searchTxtBox = window.localStorage.getItem('city');
     } else {
-        searchTxtBox = value;
+        window.localStorage.setItem('city',value);
+        searchTxtBox = window.localStorage.getItem('city');
     }
 
     await fetch(
